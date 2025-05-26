@@ -12,6 +12,7 @@ import org.knowm.xchange.okex.dto.account.OkexTradeFee;
 import org.knowm.xchange.okex.dto.marketdata.OkexCurrency;
 import org.knowm.xchange.okex.dto.marketdata.OkexInstrument;
 import org.knowm.xchange.okex.service.OkexAccountService;
+import org.knowm.xchange.okex.service.OkexLeverOrGridTradeService;
 import org.knowm.xchange.okex.service.OkexMarketDataService;
 import org.knowm.xchange.okex.service.OkexMarketDataServiceRaw;
 import org.knowm.xchange.okex.service.OkexTradeService;
@@ -57,6 +58,7 @@ public class OkexExchange extends BaseExchange {
     this.marketDataService = new OkexMarketDataService(this, getResilienceRegistries());
     this.accountService = new OkexAccountService(this, getResilienceRegistries());
     this.tradeService = new OkexTradeService(this, getResilienceRegistries());
+    this.leverageOrGridService = new OkexLeverOrGridTradeService(this, getResilienceRegistries());
   }
 
   /**

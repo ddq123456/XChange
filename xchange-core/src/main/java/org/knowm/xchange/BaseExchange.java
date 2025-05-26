@@ -27,6 +27,7 @@ public abstract class BaseExchange implements Exchange {
   protected ExchangeMetaData exchangeMetaData;
   protected MarketDataService marketDataService;
   protected TradeService tradeService;
+  protected TradeService leverageOrGridService;
   protected AccountService accountService;
 
   private final SynchronizedValueFactory<Long> nonceFactory =
@@ -188,6 +189,10 @@ public abstract class BaseExchange implements Exchange {
   public TradeService getTradeService() {
 
     return tradeService;
+  }
+
+  public TradeService getLeverageOrGridService() {
+    return leverageOrGridService;
   }
 
   public AccountService getAccountService() {
