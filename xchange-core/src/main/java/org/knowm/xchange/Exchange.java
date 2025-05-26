@@ -99,6 +99,18 @@ public interface Exchange {
    */
   TradeService getTradeService();
 
+
+  /**
+   * An trade service typically provides access to trading functionality
+   *
+   * <p>Typically access is restricted by a secret API key and/or username password authentication
+   * which are usually provided in the {@link ExchangeSpecification}
+   *
+   * @return The exchange's trade service
+   */
+  TradeService getLeverageOrGridService();
+
+
   /**
    * An account service typically provides access to the user's private exchange data
    *
